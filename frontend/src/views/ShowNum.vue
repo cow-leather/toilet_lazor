@@ -5,12 +5,24 @@
 </template>
 
 <script>
+import { req1 } from "../functions/req.js"
 export default {
     data() {
         return {
-            n: 0
+            n: 0,
+            obj: {}
         }
-    }
+    },
+    methods: {
+        getReq: async function () {
+            this.obj = await req1()
+            this.n = Number(this.obj["num"])
+            console.log(typeof (this.n))
+        }
+    },
+    created() {
+        this.getReq()
+    },
 }
 </script>
 <style>

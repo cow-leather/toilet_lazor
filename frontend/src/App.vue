@@ -1,7 +1,8 @@
 <template>
   <nav>
     <router-link to="/">number</router-link> |
-    <router-link to="/signal">signal</router-link>
+    <router-link to="/signal">signal</router-link> |
+    <router-link to="/expression">expression</router-link>
   </nav>
   <router-view />
 </template>
