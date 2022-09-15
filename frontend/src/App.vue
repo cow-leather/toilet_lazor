@@ -1,10 +1,12 @@
 <template>
+  <BekkuHeader></BekkuHeader>
   <nav>
     <router-link to="/">number</router-link> |
     <router-link to="/signal">signal</router-link> |
     <router-link to="/expression">expression</router-link>
   </nav>
   <router-view />
+  <BekkuFooter></BekkuFooter>
 </template>
 
 <style>
@@ -29,3 +31,16 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+
+<script>
+  import BekkuFooter  from "./components/BekkuFooter.vue"
+  import BekkuHeader from "./components/BekkuHeader.vue"
+
+  export default {
+    components: {
+      BekkuFooter, 
+      BekkuHeader, 
+    },
+  }
+</script>
+
