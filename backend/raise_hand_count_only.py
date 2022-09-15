@@ -7,9 +7,9 @@ def raise_count(files):
     import ast
     dic = ast.literal_eval(json.dumps(r.json()))
     dic = ast.literal_eval((dic)[0])
-    # print(type(dic["count"]))
+    print(type(dic["count"]))
     return dic["count"]
 
 
 if __name__ == "__main__":
-    raise_count()
+    print(raise_count(files1))
