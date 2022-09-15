@@ -1,7 +1,14 @@
 <template>
   <div>
-    <h1 id="number" class="number">{{ n }}</h1>
-    <h1>{{ raise_n }}</h1>
+    <p class="result">
+      <span class="prefix">今外には</span>
+      <span class="number">&nbsp; {{ n }}人 &nbsp;</span>
+      <span class="suffix">待ち</span>
+    </p>
+    <p class="result">
+      <span class="number">{{ raise_n }}人 &nbsp;</span>
+      <span class="suffix">限界</span>
+    </p>
     <div id="container">
       <!-- 0人のときは表示せず，1人増えるごとにどんどん表情が変化していく -->
       <ExpressionImage :n="n - 1" v-if="n >= 1"></ExpressionImage>
@@ -29,7 +36,7 @@ export default {
   },
   data() {
     return {
-      n: 0,
+      n: 2,
       raise_n: 0,
       obj: {},
       raise_obj: {}
@@ -55,11 +62,21 @@ export default {
 }
 </script>
 <style>
-.number {
+.result {
+  font-size: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.number {
+  font-weight: bold;
+  font-size: 56px;
+}
+
+.prefix {}
+
+.suffix {}
 
 #container {
   display: grid;
