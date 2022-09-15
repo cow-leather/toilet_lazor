@@ -1,21 +1,23 @@
 <template>
     <div>
-        <h1 id="number" class="number">{{ n }}{{ }}</h1>
+        <h1 id="number" class="number">{{ n }}</h1>
     </div>
 </template>
 
 <script>
-import { req } from "../functions/req.js"
+import { req1 } from "../functions/req.js"
 export default {
     data() {
         return {
             n: 0,
-            text: ""
+            obj: {}
         }
     },
     methods: {
-        getReq() {
-            this.text = req()
+        getReq: async function () {
+            this.obj = await req1()
+            this.n = Number(this.obj["num"])
+            console.log(typeof (this.n))
         }
     },
     created() {
