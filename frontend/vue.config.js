@@ -6,5 +6,5 @@ module.exports = {
   assetsDir: "static",
 };
 module.exports = {
-  outputDir: '../backend'
+  outputDir: '../backend/dist'
 }
