@@ -34,6 +34,7 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
 .signal {
   justify-content: center;
   width: 150px;
