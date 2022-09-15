@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from '../views/HomeView.vue'
 import ShowNum from "../views/ShowNum.vue";
 import ShowSignal from "../views/ShowSignal.vue";
+import ShowImage from '../views/ShowImage.vue'
 
 const routes = [
   {
@@ -17,6 +18,11 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: ShowSignal,
   },
+  {
+    path: '/expression',
+    name: 'expression',
+    component: ShowImage
+  }
 ];
 
 const router = createRouter({
