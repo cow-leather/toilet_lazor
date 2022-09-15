@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from flask_restful import Api, Resource
 from count_only import request_number, files
+# from flask_cors import CORS
 
 application = Flask(__name__, static_folder='./dist/static',
                     template_folder='./dist')
