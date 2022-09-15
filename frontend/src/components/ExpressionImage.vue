@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'ShowImage',
+  name: 'ExpressionImage',
   props: {
     n: {
       type: Number,
