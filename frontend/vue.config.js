@@ -5,3 +5,6 @@ module.exports = defineConfig({
 module.exports = {
   assetsDir: "static",
 };
+module.exports = {
+  outputDir: '../backend'
+}
