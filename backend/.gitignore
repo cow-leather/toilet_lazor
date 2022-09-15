@@ -5,5 +5,5 @@
 !.elasticbeanstalk/*.global.yml
 
 venv/
-
 /dist
+__pycache__/*
