@@ -7,6 +7,7 @@
 
 <script>
 import ExpressionImage from '../components/ExpressionImage.vue'
+import { req1 } from "../functions/req.js"
 
 export default {
   name: 'ShowImage',
@@ -15,9 +16,21 @@ export default {
   },
   data() {
     return {
-      n: 1
+      n: 0,
+      obj: {}
     }
-  }
+  },
+  methods: {
+    getReq: async function () {
+      this.obj = await req1()
+      this.n = Number(this.obj["num"])
+      console.log(typeof (this.n))
+    }
+  },
+  created() {
+    this.getReq()
+  },
+
 }
 </script>
 <style>
