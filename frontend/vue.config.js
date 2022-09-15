@@ -3,5 +3,6 @@ module.exports = defineConfig({
   transpileDependencies: true,
 });
 module.exports = {
+  outputDir: '../backend/dist',
   assetsDir: "static",
 };
