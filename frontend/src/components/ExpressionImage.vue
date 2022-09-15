@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <img :src="expression">
-  </div>
+  <img :src="expression">
 </template>
 
 <script>
@@ -15,7 +13,14 @@ export default {
   },
   computed: {
     expression: function () {
-      const index = (this.n > 4) ? 4 : this.n;  // 用用意してい画画が0~4なので4を超超えないように制する
+      let index = this.n;
+      if (index > 4) {
+        // 用意している画像が5枚なのでインデックスが4を超えないようにする
+        index = 4;
+      } else if (index < 0) {
+        // インデックスが0未満にならないようにする
+        index = 0;
+      }
       return require(`@/assets/business_man_${index}.png`)
     }
   },
