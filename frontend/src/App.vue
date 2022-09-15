@@ -1,7 +1,7 @@
 <template>
   <nav>
     <router-link to="/">number</router-link> |
-    <router-link to="/about">signal</router-link>
+    <router-link to="/signal">signal</router-link>
   </nav>
   <router-view />
 </template>
