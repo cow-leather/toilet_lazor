@@ -54,7 +54,7 @@ export default {
 
 #container {
   display: grid;
-  grid-template-columns: repeat(girdColumns, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   place-items: center;
 }
 </style>
