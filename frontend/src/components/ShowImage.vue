@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src="expressions[index]">
+    <img :src="expression">
   </div>
 </template>
 
@@ -13,25 +13,14 @@ export default {
       default: 0
     }
   },
-  data() {
-    return {
-      index: 0,
-      expressions: [
-        require('@/assets/business_man_0.png'),
-        require('@/assets/business_man_1.png'),
-        require('@/assets/business_man_2.png'),
-        require('@/assets/business_man_3.png'),
-        require('@/assets/business_man_4.png')
-      ]
+  computed: {
+    expression: function () {
+      const index = (this.n > 4) ? 4 : this.n;  // 用用意してい画画が0~4なので4を超超えないように制する
+      return require(`@/assets/business_man_${index}.png`)
     }
   },
-  watch: {
-    name(n) {
-      if (n > 4) {
-        this.index = 4
-      } else {
-        this.index = n
-      }
+  data() {
+    return {
     }
   }
 }
