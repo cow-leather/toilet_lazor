@@ -1,9 +1,9 @@
 <template>
   <BekkuHeader></BekkuHeader>
   <nav>
-    <router-link to="/">number</router-link> |
+    <router-link to="/">expression</router-link> |
     <router-link to="/signal">signal</router-link> |
-    <router-link to="/expression">expression</router-link>
+    <router-link to="/number">number</router-link>
   </nav>
   <router-view />
   <BekkuFooter></BekkuFooter>
@@ -33,14 +33,14 @@ nav a.router-link-exact-active {
 </style>
 
 <script>
-  import BekkuFooter  from "./components/BekkuFooter.vue"
-  import BekkuHeader from "./components/BekkuHeader.vue"
+import BekkuFooter from "./components/BekkuFooter.vue"
+import BekkuHeader from "./components/BekkuHeader.vue"
 
-  export default {
-    components: {
-      BekkuFooter, 
-      BekkuHeader, 
-    },
-  }
+export default {
+  components: {
+    BekkuFooter,
+    BekkuHeader,
+  },
+}
 </script>
 

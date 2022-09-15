@@ -6,7 +6,7 @@ import ShowImage from '../views/ShowImage.vue'
 
 const routes = [
   {
-    path: "/",
+    path: "/number",
     name: "shownum",
     component: ShowNum,
   },
@@ -19,7 +19,7 @@ const routes = [
     component: ShowSignal,
   },
   {
-    path: '/expression',
+    path: '/',
     name: 'expression',
     component: ShowImage
   }
