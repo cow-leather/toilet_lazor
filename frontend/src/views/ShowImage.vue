@@ -31,12 +31,13 @@ export default {
     },
     getRaise: async function () {
       this.raise_obj = await req2()
-      this.raise_n = Number(this.raise_obj["num"])
+      this.raise_n = Number(this.raise_obj["raiseNum"])
       console.log(this.raise_n)
     }
   },
   created() {
     this.getReq()
+    this.getRaise()
   },
 
 }

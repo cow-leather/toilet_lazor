@@ -1,6 +1,7 @@
 <template>
   <div class="app">
     <h1 id="number" class="number">{{ n }}</h1>
+
     <div class="signal" v-bind:style="signal_color"></div>
     <button v-on:click="increse">+1</button>
   </div>
